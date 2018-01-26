@@ -56,8 +56,11 @@ public class Kata {
         String a = HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
         System.out.println(a);
 
-        String b = HighAndLow3("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
-        System.out.println(b);
+        String b = HighAndLow2("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
+        System.out.println("\n" + b);
+
+        String c = HighAndLow3("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
+        System.out.println("\n" + c);
 
     }
 }
