@@ -1,4 +1,4 @@
-package kata.digPow;
+package pl.kata.digPow;
 
 public class Kata {
 
