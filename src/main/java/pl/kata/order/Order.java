@@ -35,9 +35,9 @@ public class Order {
         String[] arr = words.split(" ");
         StringBuilder result = new StringBuilder("");
 
-        for(int i = 0; i<= arr.length; i++){
+        for (int i = 0; i <= arr.length; i++) {
             for (String s : arr) {
-                if(s.contains(String.valueOf(i))){
+                if (s.contains(String.valueOf(i))) {
                     result.append(s + " ");
                 }
             }
