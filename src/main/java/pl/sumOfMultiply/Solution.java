@@ -23,9 +23,6 @@ public class Solution {
         return IntStream.range(0, number)
                 .filter(n -> (n % 3 == 0) || (n % 5 == 0))
                 .sum();
-//        return IntStream.range(0, number)
-//                .filter(n -> (n % 3 == 0) || (n % 5 == 0))
-//                .sum();
 
     }
 
