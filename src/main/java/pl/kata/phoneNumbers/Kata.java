@@ -1,10 +1,5 @@
 package pl.kata.phoneNumbers;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Kata {
     public static boolean validPhoneNumber(String phoneNumber) {
         if (phoneNumber.matches("\\(\\d{3}\\) \\d{3}-\\d{4}")) {
