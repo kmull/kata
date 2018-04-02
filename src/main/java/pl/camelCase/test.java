@@ -1,4 +1,4 @@
-package camelCase;
+package pl.camelCase;
 
 public class test {
 

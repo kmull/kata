@@ -1,4 +1,4 @@
-package camelCase;
+package pl.camelCase;
 
 import java.util.Objects;
 

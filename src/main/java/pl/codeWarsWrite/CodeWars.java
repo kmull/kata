@@ -1,4 +1,4 @@
-package codeWarsWrite;
+package pl.codeWarsWrite;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
