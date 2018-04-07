@@ -2,8 +2,9 @@ package pl.lambdaTrenning;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
-public class lambda2 {
+public class Lambda2 {
 
     public static void main(String[] args) {
 
@@ -24,6 +25,12 @@ public class lambda2 {
                 .max()
                 .ifPresent(System.out::println);
 
+//        List<Integer> myList = Arrays.asList(1, 2, 3, 4);
+//        myList.stream()
+//                .mapTo
+        IntStream.range(1, 4)
+                .mapToObj(i -> "a" + i)
+                .forEach(System.out::println);
 
     }
 
