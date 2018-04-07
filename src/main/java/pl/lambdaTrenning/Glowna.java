@@ -1,4 +1,4 @@
-package pl.lambda4;
+package pl.lambdaTrenning;
 
 public class Glowna {
 
