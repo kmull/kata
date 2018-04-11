@@ -1,6 +1,6 @@
 package pl.rekrutacja.palindrom;
 
-public class Palindrom {
+public class StringPalindrom {
 
     public boolean isPalindrom(String s) {
 
