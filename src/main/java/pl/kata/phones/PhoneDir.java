@@ -9,45 +9,54 @@ import java.util.regex.Pattern;
 public class PhoneDir {
 
     public static void phone(String string, String num) {
-//        testing(PhoneDir.phone(dr, "48-421-674-8974"), "Phone => 48-421-674-8974, Name => Anastasia, Address => Via Quirinal Roma");
 
+        String searchedString = findNumber(string, num);
+        List<String> word = splitString(searchedString);
+        viewWord(word, num);
+    }
+
+    private static String findNumber(String string, String num) {
         String[] tabString = string.split("\n");
         List<String> stringList = Arrays.asList(tabString);
         String searchedString = "my null";
 
         for (String tmpString : stringList) {
-
-
             if (tmpString.contains(num)) {
                 searchedString = tmpString;
-//                System.out.println(searchedString);
                 break;
             }
         }
+        return searchedString;
+    }
 
-//        String[] arrayString = searchedString.split("(\\+)[0-9-]+");
-//
-//        for(String a : arrayString){
-//            System.out.println(a);
-//        }
-
-        List<String> word = new ArrayList<>();
-        String myPattern = "";
-//        String myPattern = "(\\+)[0-9-]+";
-//        String myPattern = "([+0-9-]+)(<\\w>)";
-//        String myPattern = "(<)([a-zA-Z ]+)(>)";
-//        String myPattern = "[a-zA-Z ]+";
-
-        myPattern = "(<)([a-zA-Z ]+)(>)";
-        word.add(findMatcher(searchedString, myPattern));
-
-        myPattern = "(\\+)[0-9-]+";
-        word.add(findMatcher(searchedString, myPattern));
-
-        for(String a : word){
-            System.out.println("# " + a);
+    private static void viewWord(List<String> word, String num) {
+        for (String a : word) {
+            if (a.equals("Phone => Error => Not found: nb" )) {
+                System.out.println("# " + a.replace("nb", num));
+                break;
+            } else {
+                System.out.println("# " + a);
+            }
         }
+    }
 
+    private static List<String> splitString(String searchedString) {
+        List<String> word = new ArrayList<>();
+        String myPattern = "(\\+)[0-9-]+";
+        word.add("Phone => " + findMatcher(searchedString, myPattern));
+
+        myPattern = "(<)([a-zA-Z' ]+)(>)";
+        word.add("Name => " + findMatcher(searchedString, myPattern));
+
+        searchedString = searchedString
+                .replaceAll("(<)([a-zA-Z ]+)(>)", "")
+                .replaceAll("(\\+)[0-9-]+", "");
+
+        word.add("Address => " + searchedString.trim()
+                .replaceAll("[^a-z^A-Z ^. ^]", " ")
+                .replaceAll("[\\s]+", " ")
+                .trim());
+        return word;
     }
 
     private static String findMatcher(String searchedString, String myPattern) {
@@ -55,11 +64,9 @@ public class PhoneDir {
         Matcher matcher = pattern.matcher(searchedString);
 
         if (matcher.find()) {
-//            System.out.println(matcher.group(0).replace("<", "").replace(">", ""));
-//            System.out.println(matcher.group(0));
-            return matcher.group(0).replace("<", "").replace(">", "");
+            return matcher.group(0).replace("<", "").replace(">", "").trim();
         }
-        return "my null";
+        return "Error => Not found: nb";
     }
 
     public static void main(String[] args) {
@@ -81,6 +88,25 @@ public class PhoneDir {
         phone(dr, "1-541-754-3010 156");
         System.out.println();
         phone(dr, "1-111-544-8973");
+        System.out.println();
+        /*************************************/
+
+        phone(dr, "48-421-674-8974");
+        System.out.println();
+        phone(dr, "1-921-512-2222");
+        System.out.println();
+        phone(dr, "1-908-512-2222");
+        System.out.println();
+        phone(dr, "1-541-754-3010");
+        System.out.println();
+        phone(dr, "1-121-504-8974");
+        System.out.println();
+        phone(dr, "1-498-512-2222");
+        System.out.println();
+        phone(dr, "1-098-512-2222");
+        System.out.println();
+        phone(dr, "5-555-555-5555");
+
 
 //        System.out.println(dr);
     }
