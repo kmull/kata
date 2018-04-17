@@ -1,4 +1,4 @@
-package pl.rekrutacja.palindrom;
+package pl.myMatcher.palindrom;
 
 public class IntPalindrom {
 

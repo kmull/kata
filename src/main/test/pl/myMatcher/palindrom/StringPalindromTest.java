@@ -1,4 +1,4 @@
-package pl.rekrutacja.palindrom;
+package pl.myMatcher.palindrom;
 
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;

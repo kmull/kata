@@ -1,4 +1,4 @@
-package pl.rekrutacja.policzLitere_A;
+package pl.myMatcher.policzLitere_A;
 
 import java.io.File;
 import java.io.IOException;
