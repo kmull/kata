@@ -11,30 +11,40 @@ public class PhoneDir {
     public static void phone(String string, String num) {
 
         String searchedString = findNumber(string, num);
-        List<String> word = splitString(searchedString);
-        viewWord(word, num);
+        if (!searchedString.equals("Error => Too many people: nb")) {
+            List<String> word = splitString(searchedString);
+            viewWord(word, num);
+        }else {
+            System.out.println("Error => Too many people: " + num);
+        }
+
     }
 
     private static String findNumber(String string, String num) {
-        String[] tabString = string.split("\n");
-        List<String> stringList = Arrays.asList(tabString);
-        String searchedString = "my null";
-
+        List<String> stringList = Arrays.asList(string.split("\n"));
+        String result = "null";
+        int count = 0;
         for (String tmpString : stringList) {
             if (tmpString.contains(num)) {
-                searchedString = tmpString;
-                break;
+                result = tmpString;
+                count++;
+            }
+            if (count > 1) {
+                result = "Error => Too many people: nb";
             }
         }
-        return searchedString;
+        return result;
     }
 
     private static void viewWord(List<String> word, String num) {
         for (String a : word) {
-            if (a.equals("Phone => Error => Not found: nb" )) {
+            if (a.equals("Phone => Error => Not found: nb")) {
                 System.out.println("# " + a.replace("nb", num));
                 break;
-            } else {
+            } else if (a.equals("Error => Too many people: nb")) {
+                System.out.println("# " + a.replace("nb", num));
+            }
+            else {
                 System.out.println("# " + a);
             }
         }
@@ -42,6 +52,7 @@ public class PhoneDir {
 
     private static List<String> splitString(String searchedString) {
         List<String> word = new ArrayList<>();
+
         String myPattern = "(\\+)[0-9-]+";
         word.add("Phone => " + findMatcher(searchedString, myPattern));
 
@@ -49,7 +60,7 @@ public class PhoneDir {
         word.add("Name => " + findMatcher(searchedString, myPattern));
 
         searchedString = searchedString
-                .replaceAll("(<)([a-zA-Z ]+)(>)", "")
+                .replaceAll("(<)([a-zA-Z' ]+)(>)", "")
                 .replaceAll("(\\+)[0-9-]+", "");
 
         word.add("Address => " + searchedString.trim()
