@@ -64,8 +64,9 @@ public class PhoneDir {
                 .replaceAll("(\\+)[0-9-]+", "");
 
         word.add("Address => " + searchedString.trim()
-                .replaceAll("[^a-z^A-Z ^. ^]", " ")
-                .replaceAll("[\\s]+", " ")
+              //  .replaceAll("[^a-z^A-Z ^. ^]", " ")
+                .replaceAll("[\\s-]+", " ")
+//                .replace("\\/", "")
                 .trim());
         return word;
     }
