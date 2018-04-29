@@ -24,7 +24,6 @@ public class MainClass {
                 car.getModel() + "\n" +
                 car.getYear() + "\n" +
                 car.getFuelEnum() + "\n");
-
     }
 
     private static void personView(Person person) {
