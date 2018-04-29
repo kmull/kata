@@ -26,6 +26,9 @@ public class Person {
     }
 
     public Gender getGender() {
+        if (gender.equals(null)) {
+            return Gender.NOT_DEFINED;
+        }
         return gender;
     }
 

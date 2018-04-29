@@ -2,5 +2,6 @@ package paczka.nauka.builder;
 
 public enum Gender {
     MALE,
-    FEMALE
+    FEMALE,
+    NOT_DEFINED
 }

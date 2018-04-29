@@ -15,14 +15,24 @@ public class MainClass {
                 .setPesel("2223334442")
                 .build();
         personView(person_Basia);
+
+        Car car = new Car.CarBuilder("Opel", "Vectra", 2004)
+                .setFuel(FuelEnum.DIESEL)
+                .build();
+
+        System.out.println(car.getMake() + "\n" +
+                car.getModel() + "\n" +
+                car.getYear() + "\n" +
+                car.getFuelEnum() + "\n");
+
     }
 
-    private static void personView(Person person_Adam) {
-        System.out.println(person_Adam.getName() + "\n" +
-                person_Adam.getSurname() + "\n" +
-                person_Adam.getAge() + "\n" +
-                person_Adam.getGender() + "\n" +
-                person_Adam.getPesel() + "\n");
+    private static void personView(Person person) {
+        System.out.println(person.getName() + "\n" +
+                person.getSurname() + "\n" +
+                person.getAge() + "\n" +
+                person.getGender() + "\n" +
+                person.getPesel() + "\n");
     }
 
 }
