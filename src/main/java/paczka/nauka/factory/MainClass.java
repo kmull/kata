@@ -7,12 +7,12 @@ public class MainClass {
     public static void main(String[] args) {
         choseShape();
     }
+
+
     public static void choseShape() {
         int a = 4, b = 6, c = 8;
 
-        System.out.println("trojkat - t\n" +
-                "kwadrat - k\n" +
-                "prostokąt - p");
+        System.out.println("trojkat - t\nkwadrat - k\nprostokąt - p");
 
         switch (new Scanner(System.in).next()) {
             case "k":
@@ -27,8 +27,5 @@ public class MainClass {
                 new Rectangle(a, b);
                 break;
         }
-
-
     }
-
 }
