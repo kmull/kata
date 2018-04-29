@@ -7,7 +7,6 @@ public class MainClass {
     public static void main(String[] args) {
         choseShape();
     }
-
     public static void choseShape() {
         int a = 4, b = 6, c = 8;
 
