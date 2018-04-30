@@ -33,5 +33,4 @@ public class MainClass {
                 person.getGender() + "\n" +
                 person.getPesel() + "\n");
     }
-
 }
