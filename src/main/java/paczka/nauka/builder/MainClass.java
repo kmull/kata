@@ -19,7 +19,18 @@ public class MainClass {
         Car car = new Car.CarBuilder("Opel", "Vectra", 2004)
                 .setFuel(FuelEnum.DIESEL)
                 .build();
+        viewCar(car);
 
+        Pet pet = new Pet.PetBuilder("Pikuś", "Karol")
+                .setColor("brązowy")
+                .setAge(8)
+                .setSmallOrBig(true)
+                .build();
+        System.out.println(pet.getName() + " " + pet.getAge());
+
+    }
+
+    private static void viewCar(Car car) {
         System.out.println(car.getMake() + "\n" +
                 car.getModel() + "\n" +
                 car.getYear() + "\n" +

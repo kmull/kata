@@ -1,6 +1,5 @@
-package java8.youtube.stream1;
+package old.stream1;
 
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MyStream1 {

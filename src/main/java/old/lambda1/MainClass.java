@@ -1,7 +1,6 @@
-package java8.lambda1;
+package old.lambda1;
 
 import java.util.Random;
-import java.util.stream.Stream;
 
 public class MainClass {
 

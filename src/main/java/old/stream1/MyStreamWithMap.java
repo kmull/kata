@@ -1,4 +1,4 @@
-package java8.youtube.stream1;
+package old.stream1;
 
 import java.util.Arrays;
 import java.util.List;
