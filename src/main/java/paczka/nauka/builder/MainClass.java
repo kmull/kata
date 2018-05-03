@@ -27,6 +27,15 @@ public class MainClass {
                 .setSmallOrBig(true)
                 .build();
         System.out.println(pet.getName() + " " + pet.getAge());
+        System.out.println();
+
+        Cat cat = new Cat.CatBuilder("Mruczek")
+                .setColor(ColorEnum.BLACK)
+                .setAge(5)
+                .build();
+        System.out.println(cat.getName() + "\n" +
+                cat.getColor() + "\n" +
+                cat.getAge());
 
     }
 

@@ -2,7 +2,8 @@ package pl.lambda3;
 
 import java.util.Scanner;
 
-public class Glowna extends Glowna2 {
+public class
+Glowna extends Glowna2 {
 
     public Glowna(String name) {
         super(name);
