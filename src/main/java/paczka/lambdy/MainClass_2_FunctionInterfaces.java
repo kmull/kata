@@ -1,5 +1,6 @@
 package paczka.lambdy;
 
+import java.util.Comparator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -32,7 +33,17 @@ public class MainClass_2_FunctionInterfaces {
 
         Predicate<String> isEmpty = s -> s.isEmpty();
         System.out.println(isEmpty.test("g"));
+        System.out.println();
 
+        /**     Comparator    */
+        Comparator<String> indexComparator = (s1, s2) -> s1.indexOf(s2);
+        Comparator<String> indexReverseComparator = indexComparator.reversed();
+
+        String string1 = "abcdef";
+        String string2 = "cd";
+
+        System.out.println(indexComparator.compare(string1, string2));
+        System.out.println(indexReverseComparator.compare(string1, string2));
     }
 
 }
