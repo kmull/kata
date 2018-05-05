@@ -2,6 +2,7 @@ package paczka.listyITablice;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Arrays;
 
 public class MainClass {
 
@@ -37,6 +38,12 @@ public class MainClass {
         BigDecimal decimal1 = new BigDecimal("111111.222222");
         BigDecimal decimal2 = new BigDecimal("12345.123456");
         System.out.println(decimal1.subtract(decimal2));
+
+        int[] array = {4, 5, 2, 8, 1, 9, 5};
+        Arrays.sort(array);
+        for(int a : array){
+            System.out.print(a + " +");
+        }
     }
 
     public static void MyMethod() {
