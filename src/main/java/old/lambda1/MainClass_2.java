@@ -21,6 +21,5 @@ public class MainClass_2 {
         }
         myMap.entrySet().stream()
                 .forEach(x -> System.out.println(x.getKey() + " " + x.getValue()));
-
     }
 }
