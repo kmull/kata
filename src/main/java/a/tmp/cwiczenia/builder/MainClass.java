@@ -19,5 +19,14 @@ public class MainClass {
                 person.getColor() + " " +
                 person.getPesel() + " " +
                 person.getSecondName());
+
+        Car car = new Car.CarBuilder("Ania")
+                .setAge(23)
+                .setModel("Opel")
+                .build();
+
+        System.out.println(car.getName() + " " +
+                car.getModel() + " " +
+                car.getAge());
     }
 }
