@@ -21,9 +21,9 @@ public class MainClass2 {
         }
 
         if (myArray.length == myset.size()) {
-            System.out.println("tak");
+            System.out.println("tak".toUpperCase());
         } else {
-            System.out.println("nie");
+            System.out.println("nie".toUpperCase());
         }
 
 
