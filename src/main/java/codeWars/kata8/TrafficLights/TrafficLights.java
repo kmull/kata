@@ -1,4 +1,4 @@
-package codeWars.TrafficLights;
+package codeWars.kata8.TrafficLights;
 
 public class TrafficLights {
 

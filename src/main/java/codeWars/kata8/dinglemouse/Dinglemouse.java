@@ -1,7 +1,6 @@
-package codeWars.dinglemouse;
+package codeWars.kata8.dinglemouse;
 /** Sort - one, three, two * */
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 

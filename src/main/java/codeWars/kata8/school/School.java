@@ -1,4 +1,4 @@
-package codeWars.school;
+package codeWars.kata8.school;
 
 import java.util.Arrays;
 

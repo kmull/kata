@@ -1,4 +1,4 @@
-package codeWars.altERnaTIng;
+package codeWars.kata8.altERnaTIng;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

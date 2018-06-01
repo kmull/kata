@@ -1,4 +1,4 @@
-package codeWars.countSheeps;
+package codeWars.kata8.countSheeps;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

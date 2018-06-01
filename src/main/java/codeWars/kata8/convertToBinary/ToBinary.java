@@ -1,6 +1,4 @@
-package codeWars.convertToBinary;
-
-import java.util.stream.IntStream;
+package codeWars.kata8.convertToBinary;
 
 public class ToBinary {
 

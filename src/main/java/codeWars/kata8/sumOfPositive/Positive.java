@@ -1,4 +1,4 @@
-package codeWars.sumOfPositive;
+package codeWars.kata8.sumOfPositive;
 
 import java.util.Arrays;
 
