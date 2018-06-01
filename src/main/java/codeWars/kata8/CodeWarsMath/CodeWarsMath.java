@@ -9,10 +9,10 @@ public class CodeWarsMath {
 
     public static void main(String[] args) {
 
-        System.out.println(nearestSq2(1));
-        System.out.println(nearestSq2(2));
-        System.out.println(nearestSq2(10));
-        System.out.println(nearestSq2(111));
+        System.out.println(nearestSq3(1));
+        System.out.println(nearestSq3(2));
+        System.out.println(nearestSq3(10));
+        System.out.println(nearestSq3(111));
     }
 
     public static int nearestSq(final int n) {
@@ -27,6 +27,13 @@ public class CodeWarsMath {
 
         return IntStream.of((int) sqrt(n))
                 .map(x -> (int) (abs(n - pow(x, 2)) < abs(n - pow((x + 1), 2)) ? pow(x, 2) : pow((x + 1), 2)))
+                .sum();
+    }
+
+    public static int nearestSq3(final int n) {
+
+        return IntStream.of((int) round(sqrt(n)))
+                .map(x -> x * x)
                 .sum();
     }
 }
