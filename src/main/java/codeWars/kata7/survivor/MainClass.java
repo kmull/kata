@@ -21,7 +21,7 @@ public class MainClass {
             if (tempN == 1) {
                 System.out.println("count: " + count);
                 return list.get(0);
-                count--;
+//                count--;
             }
             if (counttemp%3 == 0) {
                 System.out.println("count: " + count);
